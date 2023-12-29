@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+
+	<head>
+		<meta charset="utf-8">
+	</head>
+
+	<body style="height: 100%; margin: 0">
+		<div id="container" style="height: 100%"></div>
+
+		<script type="text/javascript" src="echarts.min.js"></script>
+
+		<script type="text/javascript">
+			var dom = document.getElementById('container');
+			var myChart = echarts.init(dom, null, {
+				renderer: 'canvas',
+				useDirtyRect: false
+			});
+			var app = {};
+
+			var option;
+
+			option = {
+				legend: {},
+				tooltip: {},
+				dataset: {
+					dimensions: ['genre','count'],
+					source:[{genre:'War', count:144},{genre:'Music', count:185},{genre:'Western', count:82},{genre:'Fantasy', count:424},{genre:'Science Fiction', count:535},{genre:'Foreign', count:34},{genre:'Family', count:513},{genre:'Horror', count:519},{genre:'Crime', count:696},{genre:'Animation', count:234},{genre:'TV Movie', count:8},{genre:'Comedy', count:1722},{genre:'Documentary', count:110},{genre:'History', count:197},{genre:'Mystery', count:348},{genre:'Thriller', count:1274},{genre:'Adventure', count:790},{genre:'Romance', count:894},{genre:'Drama', count:2297},{genre:'Action', count:1154},]
+				},
+				xAxis: {
+					type: 'category'
+				},
+				yAxis: {},
+				// Declare several bar series, each will be mapped
+				// to a column of dataset.source by default.
+				series: [{
+					type: 'bar'
+				}],
+				dataZoom: [
+					{
+						show: true,
+						start: 0,
+						end: 100
+					},
+					{
+						type: 'inside',
+						start: 0,
+						end: 100
+					},
+					{
+						show: true,
+						yAxisIndex: 0,
+						filterMode: 'empty',
+						width: 30,
+						height: '80%',
+						showDataShadow: false,
+						left: '93%'
+					}
+				],
+			};
+
+			if(option && typeof option === 'object') {
+				myChart.setOption(option);
+			}
+
+			window.addEventListener('resize', myChart.resize);
+		</script>
+	</body>
+
+</html>

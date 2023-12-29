@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+
+	<head>
+		<meta charset="utf-8">
+	</head>
+
+	<body style="height: 100%; margin: 0">
+		<div id="container" style="height: 100%"></div>
+
+		<script type="text/javascript" src="echarts.min.js"></script>
+
+		<script type="text/javascript">
+			var dom = document.getElementById('container');
+			var myChart = echarts.init(dom, null, {
+				renderer: 'canvas',
+				useDirtyRect: false
+			});
+			var app = {};
+
+			var option;
+
+			option = {
+				title: {
+					text: '各类型电影比例分布',
+					subtext: 'genresRadio'
+				},
+				tooltip: {
+					trigger: 'axis'
+				},
+				legend: {
+					data: ['Action',
+						'Adventure',
+						'Animation',
+						'Comedy',
+						'Crime',
+						'Documentary',
+						'Drama',
+						'Family',
+						'Fantasy',
+						'Foreign',
+						'History',
+						'Horror',
+						'Music',
+						'Mystery',
+						'Romance',
+						'Science Fiction',
+						'TV Movie',
+						'Thriller',
+						'War',
+						'Western']
+				},
+				toolbox: {
+					show: true,
+					feature: {
+						dataView: {
+							show: true,
+							readOnly: false
+						},
+						magicType: {
+							show: true,
+							type: ['line', 'bar']
+						},
+						restore: {
+							show: true
+						},
+						saveAsImage: {
+							show: true
+						}
+					}
+				},
+				calculable: true,
+				xAxis: [{
+					type: 'value'
+					
+				}],
+				yAxis: [{
+					type: 'category',
+					// prettier-ignore
+					data: ['genresRadio',
+					]
+				}],
+				series: [{
+						name: 'Action',
+						type: 'bar',
+						data: [
+							0.09492473
+						],
+						markPoint: {
+							data: [{
+									type: 'max',
+									name: 'Max'
+								},
+								{
+									type: 'min',
+									name: 'Min'
+								}
+							]
+						},
+						// markLine: {
+						// 	data: [{
+						// 		type: 'average',
+						// 		name: 'Avg'
+						// 	}]
+						// }
+					},
+					{
+						name: 'Adventure',
+						type: 'bar',
+						data: [
+							0.06490088
+						],
+						markPoint: {
+							data: [{
+									name: 'Max',
+									value: 182.2,
+									xAxis: 7,
+									yAxis: 183
+								},
+								{
+									name: 'Min',
+									value: 2.3,
+									xAxis: 11,
+									yAxis: 3
+								}
+							]
+						},
+						// markLine: {
+						// 	data: [{
+						// 		type: 'average',
+						// 		name: 'Avg'
+						// 	}]
+						// }
+					},
+					{
+						name: 'Animation',
+						type: 'bar',
+						data: [
+							0.019248169
+						],
+						markPoint: {
+							data: [{
+								name: 'Max',
+								value: 182.2,
+								xAxis: 7,
+								yAxis: 183
+							},
+								{
+									name: 'Min',
+									value: 2.3,
+									xAxis: 11,
+									yAxis: 3
+								}
+							]
+						},
+						// markLine: {
+						// 	data: [{
+						// 		type: 'average',
+						// 		name: 'Avg'
+						// 	}]
+						// }
+					},
+					{
+						name: 'Comedy',
+						type: 'bar',
+						data: [
+							0.14164679
+						],
+						markPoint: {
+							data: [{
+								name: 'Max',
+								value: 182.2,
+								xAxis: 7,
+								yAxis: 183
+							},
+								{
+									name: 'Min',
+									value: 2.3,
+									xAxis: 11,
+									yAxis: 3
+								}
+							]
+						},
+						// markLine: {
+						// 	data: [{
+						// 		type: 'average',
+						// 		name: 'Avg'
+						// 	}]
+						// }
+					},
+					{
+						name: 'Crime',
+						type: 'bar',
+						data: [
+							0.057250965
+						],
+						markPoint: {
+							data: [{
+								name: 'Max',
+								value: 182.2,
+								xAxis: 7,
+								yAxis: 183
+							},
+								{
+									name: 'Min',
+									value: 2.3,
+									xAxis: 11,
+									yAxis: 3
+								}
+							]
+						},
+						// markLine: {
+						// 	data: [{
+						// 		type: 'average',
+						// 		name: 'Avg'
+						// 	}]
+						// }
+					},
+					{
+						name: 'Documentary',
+						type: 'bar',
+						data: [
+							0.009048285
+						],
+						markPoint: {
+							data: [{
+								name: 'Max',
+								value: 182.2,
+								xAxis: 7,
+								yAxis: 183
+							},
+								{
+									name: 'Min',
+									value: 2.3,
+									xAxis: 11,
+									yAxis: 3
+								}
+							]
+						},
+						// markLine: {
+						// 	data: [{
+						// 		type: 'average',
+						// 		name: 'Avg'
+						// 	}]
+						// }
+					},
+					{
+						name: 'Drama',
+						type: 'bar',
+						data: [
+							0.18894464
+						],
+						markPoint: {
+							data: [{
+								name: 'Max',
+								value: 182.2,
+								xAxis: 7,
+								yAxis: 183
+							},
+								{
+									name: 'Min',
+									value: 2.3,
+									xAxis: 11,
+									yAxis: 3
+								}
+							]
+						},
+						// markLine: {
+						// 	data: [{
+						// 		type: 'average',
+						// 		name: 'Avg'
+						// 	}]
+						// }
+					},
+					{
+						name: 'Family',
+						type: 'bar',
+						data: [
+							0.042115655
+						],
+						markPoint: {
+							data: [{
+								name: 'Max',
+								value: 182.2,
+								xAxis: 7,
+								yAxis: 183
+							},
+								{
+									name: 'Min',
+									value: 2.3,
+									xAxis: 11,
+									yAxis: 3
+								}
+							]
+						},
+						// markLine: {
+						// 	data: [{
+						// 		type: 'average',
+						// 		name: 'Avg'
+						// 	}]
+						// }
+					},
+					{
+						name: 'Fantasy',
+						type: 'bar',
+						data: [
+							0.03479477
+						],
+						markPoint: {
+							data: [{
+								name: 'Max',
+								value: 182.2,
+								xAxis: 7,
+								yAxis: 183
+							},
+								{
+									name: 'Min',
+									value: 2.3,
+									xAxis: 11,
+									yAxis: 3
+								}
+							]
+						},
+						// markLine: {
+						// 	data: [{
+						// 		type: 'average',
+						// 		name: 'Avg'
+						// 	}]
+						// }
+					},
+					{
+						name: 'Foreign',
+						type: 'bar',
+						data: [
+							0.0027967426
+						],
+						markPoint: {
+							data: [{
+								name: 'Max',
+								value: 182.2,
+								xAxis: 7,
+								yAxis: 183
+							},
+								{
+									name: 'Min',
+									value: 2.3,
+									xAxis: 11,
+									yAxis: 3
+								}
+							]
+						},
+						// markLine: {
+						// 	data: [{
+						// 		type: 'average',
+						// 		name: 'Avg'
+						// 	}]
+						// }
+					},
+					{
+						name: 'History',
+						type: 'bar',
+						data: [
+							0.016204655
+						],
+						markPoint: {
+							data: [{
+								name: 'Max',
+								value: 182.2,
+								xAxis: 7,
+								yAxis: 183
+							},
+								{
+									name: 'Min',
+									value: 2.3,
+									xAxis: 11,
+									yAxis: 3
+								}
+							]
+						},
+						// markLine: {
+						// 	data: [{
+						// 		type: 'average',
+						// 		name: 'Avg'
+						// 	}]
+						// }
+					},
+					{
+						name: 'Horror',
+						type: 'bar',
+						data: [
+							0.042691454
+						],
+						markPoint: {
+							data: [{
+								name: 'Max',
+								value: 182.2,
+								xAxis: 7,
+								yAxis: 183
+							},
+								{
+									name: 'Min',
+									value: 2.3,
+									xAxis: 11,
+									yAxis: 3
+								}
+							]
+						},
+						// markLine: {
+						// 	data: [{
+						// 		type: 'average',
+						// 		name: 'Avg'
+						// 	}]
+						// }
+					},
+					{
+						name: 'Music',
+						type: 'bar',
+						data: [
+							0.015217571
+						],
+						markPoint: {
+							data: [{
+								name: 'Max',
+								value: 182.2,
+								xAxis: 7,
+								yAxis: 183
+							},
+								{
+									name: 'Min',
+									value: 2.3,
+									xAxis: 11,
+									yAxis: 3
+								}
+							]
+						},
+						// markLine: {
+						// 	data: [{
+						// 		type: 'average',
+						// 		name: 'Avg'
+						// 	}]
+						// }
+					},
+					{
+						name: 'Romance',
+						type: 'bar',
+						data: [
+							0.07353788
+						],
+						markPoint: {
+							data: [{
+								name: 'Max',
+								value: 182.2,
+								xAxis: 7,
+								yAxis: 183
+							},
+								{
+									name: 'Min',
+									value: 2.3,
+									xAxis: 11,
+									yAxis: 3
+								}
+							]
+						},
+						// markLine: {
+						// 	data: [{
+						// 		type: 'average',
+						// 		name: 'Avg'
+						// 	}]
+						// }
+					},
+					{
+						name: 'Science Fiction',
+						type: 'bar',
+						data: [
+							0.044007566
+						],
+						markPoint: {
+							data: [{
+								name: 'Max',
+								value: 182.2,
+								xAxis: 7,
+								yAxis: 183
+							},
+								{
+									name: 'Min',
+									value: 2.3,
+									xAxis: 11,
+									yAxis: 3
+								}
+							]
+						},
+						// markLine: {
+						// 	data: [{
+						// 		type: 'average',
+						// 		name: 'Avg'
+						// 	}]
+						// }
+					},
+					{
+						name: 'TV Movie',
+						type: 'bar',
+						data: [
+							6.580571E-4
+						],
+						markPoint: {
+							data: [{
+								name: 'Max',
+								value: 182.2,
+								xAxis: 7,
+								yAxis: 183
+							},
+								{
+									name: 'Min',
+									value: 2.3,
+									xAxis: 11,
+									yAxis: 3
+								}
+							]
+						},
+						// markLine: {
+						// 	data: [{
+						// 		type: 'average',
+						// 		name: 'Avg'
+						// 	}]
+						// }
+					},
+					{
+						name: 'Romance',
+						type: 'bar',
+						data: [
+							0.07353788
+						],
+						markPoint: {
+							data: [{
+								name: 'Max',
+								value: 182.2,
+								xAxis: 7,
+								yAxis: 183
+							},
+								{
+									name: 'Min',
+									value: 2.3,
+									xAxis: 11,
+									yAxis: 3
+								}
+							]
+						},
+						// markLine: {
+						// 	data: [{
+						// 		type: 'average',
+						// 		name: 'Avg'
+						// 	}]
+						// }
+					},
+					{
+						name: 'Thriller',
+						type: 'bar',
+						data: [
+							0.10479559
+						],
+						markPoint: {
+							data: [{
+								name: 'Max',
+								value: 182.2,
+								xAxis: 7,
+								yAxis: 183
+							},
+								{
+									name: 'Min',
+									value: 2.3,
+									xAxis: 11,
+									yAxis: 3
+								}
+							]
+						},
+						// markLine: {
+						// 	data: [{
+						// 		type: 'average',
+						// 		name: 'Avg'
+						// 	}]
+						// }
+					},
+					{
+						name: 'War',
+						type: 'bar',
+						data: [
+							0.011845027
+						],
+						markPoint: {
+							data: [{
+								name: 'Max',
+								value: 182.2,
+								xAxis: 7,
+								yAxis: 183
+							},
+								{
+									name: 'Min',
+									value: 2.3,
+									xAxis: 11,
+									yAxis: 3
+								}
+							]
+						},
+						// markLine: {
+						// 	data: [{
+						// 		type: 'average',
+						// 		name: 'Avg'
+						// 	}]
+						// }
+					},
+					{
+						name: 'Western',
+						type: 'bar',
+						data: [
+							0.006745085
+						],
+						markPoint: {
+							data: [{
+								name: 'Max',
+								value: 182.2,
+								xAxis: 7,
+								yAxis: 183
+							},
+								{
+									name: 'Min',
+									value: 2.3,
+									xAxis: 11,
+									yAxis: 3
+								}
+							]
+						},
+						// markLine: {
+						// 	data: [{
+						// 		type: 'average',
+						// 		name: 'Avg'
+						// 	}]
+						// }
+					},
+				]
+			};
+
+			if(option && typeof option === 'object') {
+				myChart.setOption(option);
+			}
+
+			window.addEventListener('resize', myChart.resize);
+		</script>
+	</body>
+
+</html>
